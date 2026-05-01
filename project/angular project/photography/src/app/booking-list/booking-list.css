@@ -1,0 +1,47 @@
+.booking-card {
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.booking-details h3 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+}
+
+.booking-details p {
+  margin: 3px 0;
+}
+
+.completed {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-complete {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.no-bookings {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}

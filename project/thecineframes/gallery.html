@@ -1,0 +1,65 @@
+<!-- gallery.html - Gallery Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Alex Mercer Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="gallery-page">
+    <!-- Navigation -->
+    <nav class="navbar navbar-solid">
+        <div class="nav-container">
+            <div class="logo">AM</div>
+            <ul class="nav-links">
+                <li><a href="interface.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="interface.html#booking">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <div class="container">
+            <button class="btn-back" onclick="navigateToHome()">← Back to Home</button>
+            <h1 class="gallery-title">Selected Works</h1>
+            <p class="gallery-subtitle">A curated collection of cinematic moments</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <!-- Loading indicator -->
+            <div id="galleryLoader" class="gallery-loader">
+                <div class="loader-spinner"></div>
+                <p>Loading portfolio...</p>
+            </div>
+            
+            <!-- Gallery container - images will be loaded here dynamically -->
+            <div id="galleryGrid" class="gallery-grid hidden">
+                <!-- Images will be injected via JavaScript Fetch API -->
+            </div>
+
+            <!-- Error message container -->
+            <div id="galleryError" class="gallery-error hidden">
+                <p>Unable to load images. Please try again later.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Alex Mercer Photography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

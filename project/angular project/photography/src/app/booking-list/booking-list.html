@@ -1,0 +1,21 @@
+<div class="booking-list">
+  <h2>All Bookings</h2>
+
+  <div *ngIf="bookings.length === 0" class="no-bookings">
+    <p>No bookings available.</p>
+  </div>
+
+  <div *ngFor="let booking of bookings" class="booking-card">
+    <div class="booking-details">
+      <h3>{{ booking.clientName }}</h3>
+      <p><strong>Event:</strong> {{ booking.eventType }}</p>
+      <p><strong>Date:</strong> {{ booking.date }}</p>
+      <p><strong>Location:</strong> {{ booking.location }}</p>
+      <p><strong>Status:</strong> <span [class.completed]="booking.status === 'Completed'">{{ booking.status }}</span></p>
+    </div>
+    <div class="booking-actions">
+      <button *ngIf="booking.status === 'Pending'" (click)="markAsCompleted(booking.id)" class="btn-complete">Mark as Completed</button>
+      <button (click)="deleteBooking(booking.id)" class="btn-delete">Delete</button>
+    </div>
+  </div>
+</div>
